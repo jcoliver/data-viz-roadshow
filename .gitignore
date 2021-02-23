@@ -5,3 +5,4 @@
 
 *.Rproj
 .ipynb_checkpoints
+output/
