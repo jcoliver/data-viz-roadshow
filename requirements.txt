@@ -1,0 +1,3 @@
+# Libraries required for Python example Jupyter Notebook
+pandas==1.2.0
+seaborn==0.11.1

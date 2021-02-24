@@ -39,7 +39,7 @@ ggplot(data = concrete, mapping = aes(x = Age,
                                       y = Compressive_Strength,
                                       color = Cement)) +
   geom_point(size = 2) +
-  geom_smooth(method = "lm", formula = y ~ poly(x, 4))
+  geom_smooth(method = "lm", formula = y ~ poly(x, degree = 4))
 
 
 single <- lm(Compressive_Strength ~ Age, data = concrete)
