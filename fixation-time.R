@@ -28,7 +28,8 @@ for (i in 1:length(N_vector)) {
   }
 }
 
-df$N_fac <- factor(df$N)
+df$N_fac <- factor(df$N,
+                   levels = rev(N_vector))
 
 t_plot <- ggplot(data = df,
                  mapping = aes(x = s, 
@@ -38,7 +39,9 @@ t_plot <- ggplot(data = df,
   geom_line(size = 1) +
   xlab(label = expression(italic("s"))) +
   ylab(label = expression(italic("E(t)"))) +
-  scale_color_discrete(name = expression(italic(N[e]))) +
+  scale_color_manual(name = expression(italic(N[e])),
+                     values = c("#253494", "#2c7fb8", "#41b6c4", "#7fcdbb"),
+                     ) +
   theme_minimal() +
   theme(axis.title = element_text(size = 14),
         axis.text = element_text(size = 12),
