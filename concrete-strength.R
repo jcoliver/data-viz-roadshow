@@ -5,7 +5,6 @@
 
 ################################################################################
 library(ggplot2)
-library(purrr)
 library(dplyr)
 library(tidyr)
 
