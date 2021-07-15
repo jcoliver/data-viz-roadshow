@@ -4,7 +4,6 @@
 # 2021-07-14
 
 library(dplyr)
-# library(tidyr)
 library(ggplot2)
 
 fix_time <- function(N, s) {
