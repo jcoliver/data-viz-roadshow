@@ -6,6 +6,10 @@
 library(dplyr)
 library(tidyr)
 
+# Data are tidied up from download from 
+# https://covid.cdc.gov/covid-data-tracker/
+# on 2021-07-14
+
 cases <- read.csv(file = "data/COVID_Case_Data.csv",
                   na.strings = c("NA", "N/A"))
 
