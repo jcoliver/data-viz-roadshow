@@ -4,10 +4,54 @@
 # 2021-09-22
 
 library(dplyr)
+library(ggplot2)
 
+# envs <- read.csv(file = "~/Desktop/joined_sheets.csv")
+# envs <- envs %>%
+#   rename(Soil_Series = Soil.series,
+#          Sample_Number = Sample.Number,
+#          Total_N = Total.N....,
+#          Total_C = Total.C....,
+#          Inorganic_C = Inorganic.C....,
+#          Organic_C = Organic.Carbon....,
+#          Macro_Aggregates = Macro.Aggregates....,
+#          Sample_Ref = Sample.Ref,
+#          GramPos_GramNeg = Gram._Gram.,
+#          Per_AM_Fungi = Per_AM.Fungi,
+#          Per_Gram_Neg = Per_Gram.Negative,
+#          Per_Gram_Pos = Per_Gram.Positive)
+
+# write.csv(file = "data/Soil_Micro_Data.csv", x = envs, row.names = FALSE)
 envs <- read.csv(file = "data/Soil_Micro_Data.csv")
 
-# Possible plots (Y vs X):
+envs$Site <- factor(x = trimws(envs$Site))
+envs$Depth <- factor(x = trimws(envs$Depth))
+envs$Soil_Series <- factor(x = trimws(envs$Soil_Series))
+envs$Irrigation <- factor(x = trimws(envs$Irrigation))
+summary(envs[, c("Site", "Depth", "Soil_Series", "Irrigation")])
+
+# Plot for slideshow
+boxplot(Per_Fungi ~ Soil_Series, data = envs)
+t.test(x = envs$Per_Fungi[envs$Soil_Series == "Casa Grande"], 
+       y = envs$Per_Fungi[envs$Soil_Series == "Mohall"])
+
+# Get summary stats (mean + SE) for table
+soil_summary <- envs %>%
+  group_by(Soil_Series) %>%
+  summarize(mean_fungi = mean(Per_Fungi, na.rm = TRUE),
+            se_fungi = sd(Per_Fungi, na.rm = TRUE)/sqrt(n()))
+
+# Plot boxplot
+soil_boxplot <- ggplot(data = envs, mapping = aes(x = Soil_Series, 
+                                                  y = Per_Fungi)) +
+  geom_boxplot() +
+  xlab(label = "Soil Series") +
+  ylab(label = "% Fungi") +
+  theme_bw()
+soil_boxplot
+ggsave(file = "output/soil-fungi.png", plot = soil_boxplot)
+
+# Possible plots for notebook (Y vs X):
 # Per_Fungi vs. Macro_Aggregates (negative)
 plot(x = envs$Macro_Aggregates, y = envs$Per_Fungi)
 # Per_Actinomycetes vs. Organic_C (negative)
