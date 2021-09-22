@@ -11,3 +11,6 @@ and R available through MyBinder:
 + COVID case and vaccination rates
     + Python: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-covid-seaborn.ipynb)
     + R: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-covid-ggplot.ipynb)
++ Soil chemistry and microbiota
+    + Python: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-envs-seaborn.ipynb)
+    + R: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-envs-ggplot.ipynb)
