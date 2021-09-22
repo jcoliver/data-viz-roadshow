@@ -1,0 +1,7 @@
+Column,Description
+Inorganic_C,% Inorganic C from combustion and gas analysis after acidification
+Organic_C,% Organic Carbon from combustion and gas analysis after acidification
+Total_C,% Total C from combustion
+Macro_Aggregates,% Macro Aggregates from yoder style immersion
+Per_Actinomycetes,% Actinomycetes
+Per_Fungi,% Fungi
