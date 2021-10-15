@@ -1,4 +1,4 @@
-# Plot demonstrating utility of boxplots
+# Boxplot on plywood data
 # Jeffrey C. Oliver
 # jcoliver@email.arizona.edu
 # 2021-02-23
@@ -34,4 +34,4 @@ plywood_plot <- ggplot(data = fiber_internal,
         axis.title = element_text(size = 18))
 print(plywood_plot)
 
-ggsave(filename = "output/plywood-boxplot.png", plot = plywood_plot)
+ggsave(filename = "output/boxplot-plywood.png", plot = plywood_plot)
