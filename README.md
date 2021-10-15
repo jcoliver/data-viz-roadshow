@@ -14,3 +14,6 @@ and R available through MyBinder:
 + Soil chemistry and microbiota
     + Python: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-envs-seaborn.ipynb)
     + R: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-envs-ggplot.ipynb)
++ _Iris_ flower measurements
+    + Python: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-iris-seaborn.ipynb)
+    + R: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-iris-ggplot.ipynb)
