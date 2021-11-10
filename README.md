@@ -17,3 +17,6 @@ and R available through MyBinder:
 + _Iris_ flower measurements
     + Python: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-iris-seaborn.ipynb)
     + R: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-iris-ggplot.ipynb)
++ Megastore sales
+    + Python: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-megastore-seaborn.ipynb)
+    + R: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-megastore-ggplot.ipynb)
