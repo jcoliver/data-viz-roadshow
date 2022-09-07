@@ -6,6 +6,11 @@
 ################################################################################
 library(dplyr)
 library(ggplot2)
+library(extrafont) # So we can use Arial in figures
+# This installation of Rttf2pt1 is required to avoid No FontName issue
+# remotes::install_version("Rttf2pt1", version = "1.3.8")
+extrafont::font_import()
+extrafont::fonttable()
 
 # Plywood strength data from https://data.mendeley.com/datasets/hkgstm9sxg/1
 plywood <- read.csv(file = "data/Plywood_Data.csv")
@@ -31,7 +36,8 @@ plywood_plot <- ggplot(data = fiber_internal,
                               "Parallel" = "Parallel")) +
   theme_bw() +
   theme(axis.text = element_text(size = 14),
-        axis.title = element_text(size = 18))
+        axis.title = element_text(size = 18),
+        text = element_text(family = "ArialMT"))
 print(plywood_plot)
 
-ggsave(filename = "output/boxplot-plywood.png", plot = plywood_plot)
+ggsave(filename = "output/boxplot-plywood.pdf", plot = plywood_plot)
