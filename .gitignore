@@ -5,4 +5,5 @@
 
 *.Rproj
 .ipynb_checkpoints
-output/
+output/*
+!output/.gitkeep
