@@ -23,3 +23,6 @@ and R available through MyBinder:
 + Soil chemistry and microbiota
     + Python: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-envs-seaborn.ipynb)
     + R: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-envs-ggplot.ipynb)
++ Tucson summer solstice temperature
+    + Python: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-heat-seaborn.ipynb)
+    + R: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jcoliver/data-viz-roadshow/main?filepath=intro-heat-ggplot.ipynb)
