@@ -9,6 +9,8 @@ library(ggplot2)
 ################################################################################
 # Reduction from large dataset to three Arizona cities
 
+# Data from https://kilthub.cmu.edu/articles/dataset/Compiled_daily_temperature_and_precipitation_data_for_the_U_S_cities/7890488/5
+
 # Large data file (>500 MB), not under version control
 # all_cities <- read.csv(file = "~/Desktop/city-heat/all_cities.csv")
 
@@ -51,6 +53,7 @@ summer_summary <- summer_solstice %>%
   group_by(name) %>%
   summarize(mean_tmax = mean(tmax, na.rm = TRUE),
             sd_tmax = sd(tmax, na.rm = TRUE))
+summer_summary
 
 summer_box <- ggplot(data = summer_solstice, mapping = aes(x = name, y = tmax)) +
   geom_boxplot() +
@@ -76,6 +79,13 @@ ggsave(file = "output/boxplot-heat.png", plot = summer_box)
 #           row.names = FALSE)
 
 tucson_summer <- read.csv(file = "data/tucson-summer.csv")
+
+# Pull out a few rows for hand-plot exercise
+decades <- seq(from = 1921, to = 2021, by = 20)
+hand_plot <- tucson_summer %>%
+  filter(year %in% decades) %>%
+  select(year, tmax)
+hand_plot
 
 # Plot with linear regression
 ggplot(data = tucson_summer, mapping = aes(x = year, y = tmax)) +
